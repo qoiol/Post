@@ -77,7 +77,7 @@ erDiagram
 
 ## 🚀 API 명세
 
-post-controller
+* **post-controller**
 | Endpoint | Method | Description |
 | --- | --- | --- |
 | `/api/v1/posts` | `POST` | 새 게시글 등록 |
@@ -91,7 +91,7 @@ post-controller
 | `/api/v1/posts/{id}/comments` | `GET` | 댓글 목록 조회 |
 | `/api/v1/posts/{id}/comments` | `POST` | 댓글 등록 |
 
-user-controller
+* **user-controller**
 | Endpoint | Method | Description |
 | --- | --- | --- |
 | `/api/v1/users/login` | `POST` | 로그인 |
