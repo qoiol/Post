@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/com/example/postservice/model/Post.java
 package com.example.postservice.model;
+========
+package com.example.postservice.model.entity;
+>>>>>>>> e2869804ed32b58d1689d542f2a6cca11a28e77c:src/main/java/com/example/postservice/model/entity/Post.java
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,10 +15,10 @@ import java.time.Instant;
 @Entity
 @Table(name = "post")
 @Builder
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@SQLDelete(sql = "updated \"post\" set deleted_at = now() where id = ?")
+@SQLDelete(sql = "update post set deleted_at = now() where id = ?")
 @SQLRestriction("deleted_at is null")
 public class Post {
     @Id

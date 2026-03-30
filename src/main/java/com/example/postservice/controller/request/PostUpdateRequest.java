@@ -2,10 +2,12 @@ package com.example.postservice.controller.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
-public class PostCreateRequest {
+@NoArgsConstructor
+public class PostUpdateRequest {
     private String title;
     private String body;
 }

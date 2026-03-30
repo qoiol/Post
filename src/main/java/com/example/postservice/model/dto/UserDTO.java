@@ -1,6 +1,6 @@
 package com.example.postservice.model.dto;
 
-import com.example.postservice.model.User;
+import com.example.postservice.model.entity.User;
 import com.example.postservice.model.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
