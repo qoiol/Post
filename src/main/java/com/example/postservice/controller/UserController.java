@@ -1,13 +1,13 @@
 package com.example.postservice.controller;
 
 
-import com.example.postservice.dto.request.UserDeleteRequest;
-import com.example.postservice.dto.request.UserJoinRequest;
-import com.example.postservice.dto.request.LoginRequest;
-import com.example.postservice.dto.response.Response;
-import com.example.postservice.dto.response.UserDeleteResponse;
-import com.example.postservice.dto.response.UserJoinResponse;
-import com.example.postservice.dto.response.LoginResponse;
+import com.example.postservice.controller.request.UserDeleteRequest;
+import com.example.postservice.controller.request.UserJoinRequest;
+import com.example.postservice.controller.request.LoginRequest;
+import com.example.postservice.controller.response.Response;
+import com.example.postservice.controller.response.UserDeleteResponse;
+import com.example.postservice.controller.response.UserJoinResponse;
+import com.example.postservice.controller.response.LoginResponse;
 import com.example.postservice.service.UserService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;

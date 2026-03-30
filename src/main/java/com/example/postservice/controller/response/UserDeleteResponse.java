@@ -1,11 +1,11 @@
-package com.example.postservice.dto.request;
+package com.example.postservice.controller.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class LoginRequest {
+public class UserDeleteResponse {
     private String id;
-    private String password;
+
 }

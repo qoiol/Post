@@ -1,9 +1,8 @@
 package com.example.postservice.controller;
 
 
-import com.example.postservice.dto.request.PostCreateRequest;
-import com.example.postservice.dto.response.PostCreateResponse;
-import com.example.postservice.dto.response.Response;
+import com.example.postservice.controller.request.PostCreateRequest;
+import com.example.postservice.controller.response.Response;
 import com.example.postservice.service.PostService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

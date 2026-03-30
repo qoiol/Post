@@ -1,8 +1,7 @@
 package com.example.postservice.service;
 
-import com.example.postservice.domain.Post;
-import com.example.postservice.domain.User;
-import com.example.postservice.dto.response.PostCreateResponse;
+import com.example.postservice.model.Post;
+import com.example.postservice.model.User;
 import com.example.postservice.exception.ErrorCode;
 import com.example.postservice.exception.PostApplicationException;
 import com.example.postservice.repository.PostRepository;

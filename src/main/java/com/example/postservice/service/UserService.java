@@ -1,11 +1,11 @@
 package com.example.postservice.service;
 
-import com.example.postservice.domain.User;
-import com.example.postservice.dto.UserDTO;
-import com.example.postservice.dto.response.UserDeleteResponse;
-import com.example.postservice.dto.response.UserInfoResponse;
-import com.example.postservice.dto.response.UserJoinResponse;
-import com.example.postservice.dto.response.LoginResponse;
+import com.example.postservice.model.User;
+import com.example.postservice.model.dto.UserDTO;
+import com.example.postservice.controller.response.UserDeleteResponse;
+import com.example.postservice.controller.response.UserInfoResponse;
+import com.example.postservice.controller.response.UserJoinResponse;
+import com.example.postservice.controller.response.LoginResponse;
 import com.example.postservice.exception.ErrorCode;
 import com.example.postservice.exception.PostApplicationException;
 import com.example.postservice.repository.UserRepository;
