@@ -1,6 +1,7 @@
 package com.example.postservice.model.entity;
 
 import com.example.postservice.model.UserRole;
+import com.example.postservice.model.dto.UserDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
@@ -9,6 +10,7 @@ import org.hibernate.annotations.SQLRestriction;
 import java.sql.Timestamp;
 import java.time.Instant;
 
+@Builder
 @ToString
 @Entity
 @Table(name = "user")
@@ -19,8 +21,11 @@ import java.time.Instant;
 @SQLRestriction("deleted_at is null")
 public class User {
     @Id
-    @Column(name = "id", nullable = false, unique = true, length = 30)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "username", nullable = false, unique = true, length = 30)
+    private String username;
     @Column(name = "password", nullable = false, length = 300)
     private String password;
     @Column(name = "role")
