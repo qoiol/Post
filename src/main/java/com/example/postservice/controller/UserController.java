@@ -49,16 +49,19 @@ public class UserController {
 
     @GetMapping("/alarm")
     public Response<Page<AlarmResponse>> alarm(Pageable pageable, Authentication authentication) {
-        UserDTO user = ClassUtils.getSafeCastInstance(authentication.getPrincipal(), UserDTO.class)
+	UserDTO user = ClassUtils.getSafeCastInstance(authentication.getPrincipal(), UserDTO.class)
                 .orElseThrow(() -> new PostApplicationException(ErrorCode.INTERNAL_SERVER_ERROR, "Casting to User class failed"));
+	log.info("notification occurs {}", user.getUsername());
         return Response.success(userService.alarmList(pageable, user.getId()).map(AlarmResponse::fromAlarmDTO));
     }
 
     @GetMapping("/alarm/subscribe")
-    public SseEmitter subsrcibe(Authentication authentication) {
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+    public SseEmitter subscribe(Authentication authentication) {
         UserDTO user = ClassUtils.getSafeCastInstance(authentication.getPrincipal(), UserDTO.class)
                 .orElseThrow(() -> new PostApplicationException(ErrorCode.INTERNAL_SERVER_ERROR, "Casting to User class failed"));
-        return alarmService.connectAlarm(user.getId());
+        log.info("notification subscribe {}", user.getUsername()); 
+	return alarmService.connectAlarm(user.getId());
     }
 
 }
